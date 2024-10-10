@@ -1,0 +1,78 @@
+.albums-container {
+    font-family: 14px Helvetica;
+    max-width: 80%;
+    text-align: left;
+    margin: 0 auto;
+}
+
+.albums-grid {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); */
+    /* max-width: calc(220px * 5); */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    font-size: 14px;
+    margin-top: 40px;
+}
+
+.albums-card {
+    position: relative;
+    height: 250px;
+    max-width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    flex-direction: column;
+    background: gray;
+    padding: 10px;
+    color: #ffffff
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    /* Space between icons */
+    position: absolute;
+    top: 10px;
+    /* Adjust positioning as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    /* Initially hidden */
+    transition: opacity 0.3s ease;
+    /* Smooth transition */
+}
+
+.albums-card:hover .icon-container {
+    transform: scale(1.05);
+    opacity: 0.1px;
+}
+
+.icon {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    background-image: url('../assets/icons/heart.svg');
+
+}
+
+.albums-card p {
+    margin: 5px;
+}
+
+@media (max-width: 480px) {
+    .albums-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 1024px) {
+    .albums-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
