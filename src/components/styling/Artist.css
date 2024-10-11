@@ -1,7 +1,11 @@
 .artist-card {
-    display: flex;
-    justify-content: flex-end;
     font-family: Helvetica;
     color: #a0a0a0;
     font-size: 14px;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+.artist-card p {
+    margin: 0;
 }

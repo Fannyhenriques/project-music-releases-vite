@@ -2,6 +2,7 @@ import { albums } from "../data.json";
 import { AlbumCover } from "./AlbumCover.jsx";
 import { Album } from "./Album.jsx"
 import { Artist } from "./Artist.jsx";
+import { Icons } from "./Icons.jsx";
 import "./styling/Albums.css";
 
 export const Albums = () => {
@@ -10,9 +11,15 @@ export const Albums = () => {
       <div className="albums-grid">
         {albums.items.map(({ name, id, artists, images }) => (
           <div key={id} className="albums-card">
-            <AlbumCover images={images} />
-            <Album name={name} />
-            <Artist artists={artists} />
+            <div className="album-content">
+              <AlbumCover images={images} />
+              <Icons />
+            </div>
+            <div className="artist-content">
+              <Album name={name} />
+              <Artist artists={artists} />
+            </div>
+
           </div>
         ))}
       </div>
