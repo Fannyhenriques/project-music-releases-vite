@@ -16,22 +16,26 @@
 .albums-card {
     margin: 0 auto;
     position: relative;
-    max-width: 100%;
+    /* max-width: 100%; */
     height: 300px;
     display: flex;
     justify-content: center;
     flex-direction: column;
     gap: 5px;
-    /* background-color: gray; */
     color: #ffffff
 }
 
 .album-content {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
     height: 90%;
+}
+
+.album-content:hover .album-cover {
+    filter: brightness(0.4);
 }
 
 .artist-content {
@@ -70,5 +74,12 @@
 
     .albums-card {
         height: 280px;
+    }
+}
+
+
+@media (min-width: 1023px) and (max-width: 1200px) {
+    .albums-card {
+        height: 260px;
     }
 }

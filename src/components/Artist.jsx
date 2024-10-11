@@ -5,9 +5,17 @@ export const Artist = ({ artists }) => {
     <div>
       {artists.map((artist, index) => (
         <div className="artist-card" key={artist.id}>
-          <p>{artist.name}{index + 1 < artists.length ? ',' : ''}</p>
+          <a
+            href={artist.external_urls.spotify}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="artist-link">
+            {artist.name}
+          </a>
+          {index + 1 < artists.length ? ',' : ''}
         </div>
-      ))}
-    </div>
+      ))
+      }
+    </div >
   );
 };

@@ -1,9 +1,16 @@
 import "./styling/Album.css"
 
-export const Album = ({ name }) => {
+export const Album = ({ name, externalUrl }) => {
   return (
     <div className="album-name">
-      <p>{name}</p>
+      <a
+        href={externalUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="album-link"
+      >
+        {name}
+      </a>
     </div>
   );
 };

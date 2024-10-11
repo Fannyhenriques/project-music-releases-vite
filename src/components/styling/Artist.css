@@ -9,3 +9,12 @@
 .artist-card p {
     margin: 0;
 }
+
+.artist-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.artist-link:hover {
+    text-decoration: underline;
+}

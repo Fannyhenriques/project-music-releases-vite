@@ -1,0 +1,7 @@
+.footer {
+    height: 50px;
+    margin: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    color: rgb(222, 200, 217)
+}
